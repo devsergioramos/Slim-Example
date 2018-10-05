@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start();//inicia uma nova sessão ou resuma uma sessão existente
 
 error_reporting(E_ALL | E_STRICT);// Define quais erros serão reportados
 //E_ALL = mostra todos os erros | E_STRICT = Permite o PHP sugerir mudanças ao seu codigo   
