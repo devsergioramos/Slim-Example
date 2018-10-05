@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Posts</h2>
+
+            <a href="<?= PATH ?>/admin/posts/add" class="btn btn-primary btn-lg btn-block btn-novo-post">Novo Post</a><br/>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Lista de Posts
+                </div>
+
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Titulo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <?php if (isset($posts)): foreach ($posts as $post): ?>
+                            <tr>
+                                <td><?= $post->id ?></td>
+                                <td><?= $post->titulo ?></td>
+                                <td>
+                                    <a href="<?= PATH ?>/admin/posts/<?= $post->id ?>/view" alt="visualizar" class="btn btn-info">Visualizar</a>
+                                    <a href="<?= PATH ?>/admin/posts/<?= $post->id ?>/edit" alt="editar" class="btn btn-warning">Editar</a>
+                                    <a href="<?= PATH ?>/admin/posts/<?= $post->id ?>/del" alt="excluir" class="btn btn-danger">Excluir</a>
+                                </td>
+                            </tr>
+                            <?php endforeach; endif;?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

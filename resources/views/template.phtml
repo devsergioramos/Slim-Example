@@ -1,0 +1,9 @@
+<?php include_once "inc/header.phtml"; ?>
+
+<?php 
+    if (isset($page)) {
+        include_once "pages/" . $page . '.phtml';
+    }
+?>
+
+<?php include_once "inc/footer.phtml"; ?>
